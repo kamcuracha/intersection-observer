@@ -1,0 +1,126 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: #212933;
+  color: #738BAA;
+  font-family: 'Nunito';
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% auto;
+      grid-template-columns: 70% auto;
+}
+
+.content .left {
+  position: relative;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 300px;
+  width: 200px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/yellow.jpg");
+  background-size: contain;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+
+.content .left p {
+  background: white;
+  position: absolute;
+  margin-top: -25%;
+  right: 17%;
+  color: black;
+  padding: 1em;
+  border-radius: 15px;
+  width: 20vw;
+  text-align: left;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+.content .left img {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+.content .yellow {
+  width: 50%;
+  opacity: 0;
+}
+
+.content .squig {
+  position: absolute;
+  margin-top: 32%;
+  left: 19%;
+  width: 8vw;
+}
+
+.content .right {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.content .right h2 {
+  color: white;
+  font-size: 1.7rem;
+}
+
+.content .right p {
+  line-height: 1.6em;
+}
+
+.js-anim {
+  opacity: 0;
+}
+
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: solid 10px;
+  border-radius: 50%;
+  z-index: 9999;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-100px) translateZ(20px);
+            transform: translateY(-100px) translateZ(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0) translateZ(20px);
+            transform: translateY(0) translateZ(20px);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-100px) translateZ(20px);
+            transform: translateY(-100px) translateZ(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0) translateZ(20px);
+            transform: translateY(0) translateZ(20px);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

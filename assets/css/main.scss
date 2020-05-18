@@ -1,0 +1,102 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: #212933;
+  color: #738BAA;
+  font-family: 'Nunito';
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 70% auto;
+
+  .left {
+      position: relative;
+      text-align: center;
+      display: grid;
+      place-items: center;
+      transform-style: preserve-3d;
+      height: 300px;
+      width: 200px;
+      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/yellow.jpg');
+      background-size: contain;
+      transform: perspective(1000px);
+
+      p {
+          background: white;
+          position: absolute;
+          margin-top: -25%;
+          right: 17%;
+          color: black;
+          padding: 1em;
+          border-radius: 15px;
+          width: 20vw;
+          text-align: left;
+          transform: translateZ(20px);
+      }
+
+      img {
+        transform: translateZ(20px);
+      }
+  }
+
+  .yellow {
+      width: 50%;
+      opacity: 0;
+  }
+
+  .squig {
+      position: absolute;
+      margin-top: 32%;
+      left: 19%;
+      width: 8vw;
+  }
+
+  .right {
+      display: grid;
+      place-items: center;
+
+      h2 {
+          color: white;
+          font-size: 1.7rem;
+      }
+
+      p {
+          line-height: 1.6em;
+      }
+  }
+
+}
+
+.js-anim {
+  opacity: 0;
+}
+
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: solid 10px;
+  border-radius: 50%;
+  z-index: 9999;
+
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+@keyframes anim1 {
+  from {
+    transform: translateY(-100px) translateZ(20px);
+    opacity: 0;
+  }
+  to  {
+    transform: translateY(0) translateZ(20px);
+    opacity: 1;
+  }
+}
